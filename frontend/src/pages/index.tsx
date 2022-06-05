@@ -5,7 +5,16 @@ import { Dialog, TextField, Grid, DialogActions, Button, Snackbar } from '@mui/m
 import { useIndex } from '../data/hooks/pages/useIndex'
 
 const Home: NextPage = () => {
-  const {petListArray, petSelected, setPetSelected} = useIndex()
+  const {
+    petListArray, 
+    petSelected, 
+    setPetSelected, 
+    email, 
+    setEmail, 
+    value, 
+    setValue, 
+    message, 
+    setMessage, adtop} = useIndex()
 
   return (
     <div>
@@ -19,32 +28,49 @@ const Home: NextPage = () => {
       } />
       <ListPets onSelect={(pet) => setPetSelected(pet)} pets={petListArray} />
 
-      <Dialog open={petSelected !== null} onClose={() => setPetSelected(null)} fullWidth PaperProps={{sx: {p: 5}}}>
+      <Dialog 
+        open={petSelected !== null} 
+        fullWidth
+        PaperProps={{ sx: { p: 5 } }}
+        onClose={() => setPetSelected(null)}
+      >
         <Grid container spacing={2} >
-          <Grid item xs={12}>
-            <TextField 
-            label={'Seu Email'}
-            type={'email'}
-            fullWidth
+          <Grid item xs={12} >
+            <TextField
+              label={'E-mail'}
+              type={'email'}
+              fullWidth
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Grid>
-          <Grid item xs={12}>
-            <TextField 
-            label={'Ajuda por mês'}
-            type={'number'}
-            fullWidth
+          <Grid item xs={12} >
+            <TextField
+              label={'Quantia por mês'}
+              type={'number'}
+              fullWidth
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
             />
           </Grid>
         </Grid>
-        <DialogActions sx={{mt: 5}}>
-          <Button 
-          color={'secondary'}
-          onClick={() => setPetSelected(null)}
-          >Cancelar</Button>
-          <Button variant={'contained'} sx={{color: '#fff'}}>Confirmar Adoção</Button>
+        <DialogActions sx={{mt: 5}} >
+          <Button
+            color={'secondary'}
+            onClick={() => setPetSelected(null)}
+          >
+            Cancelar
+          </Button>
+          <Button
+            style={{'color': '#fff'}}
+            variant={'contained'}
+            onClick={() => adtop()}
+          >
+            Confirmar adoção
+          </Button>
         </DialogActions>
-        </Dialog>
-        <Snackbar open={false} message={'Hoje eu acordei mais cedo'} />
+      </Dialog>
+      <Snackbar open={message.length > 0} message={message} autoHideDuration={2500} onClose={() => setMessage('')}></Snackbar>
     </div>
   )
 }
