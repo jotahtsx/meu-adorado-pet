@@ -11,8 +11,8 @@ const Home: NextPage = () => {
     setPetSelected, 
     email, 
     setEmail, 
-    value, 
-    setValue, 
+    allowance_amount, 
+    setAllowanceAmount, 
     message, 
     setMessage, adtop} = useIndex()
 
@@ -49,8 +49,8 @@ const Home: NextPage = () => {
               label={'Quantia por mês'}
               type={'number'}
               fullWidth
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
+              value={allowance_amount}
+              onChange={(e) => setAllowanceAmount(e.target.value)}
             />
           </Grid>
         </Grid>
