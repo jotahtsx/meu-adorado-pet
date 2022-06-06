@@ -40,10 +40,13 @@ export const Informations = styled('div')`
 export const Name = styled('h2')`
     margin-top: 0;
     margin-bottom: 1rem;
+    font-size: 1.875rem;
+    color: ${({theme}) => theme.palette.text.primary};
 `;
 
 export const Description = styled('p')`
     margin-top: 0;
     margin-bottom: 1rem;
     word-break: break-word;
+    color: ${({theme}) => theme.palette.text.secondary};
 `;

@@ -2,6 +2,9 @@ import {createTheme} from '@mui/material';
 
 const theme = createTheme(
     {
+        typography: {
+            fontFamily: 'Work Sans, sans-serif',
+        },
         palette: {
             primary: {
                 main: '#F67A7B',
@@ -10,12 +13,9 @@ const theme = createTheme(
                 main: '#C5C5C5',
             },
             text: {
-                primary: '#3C4B5C',
+                primary: '#2d3436',
                 secondary: '#526275',
             },
-        },
-        typography: {
-            fontFamily: 'Work Sans, sans-serif',
         },
         shape: {
             borderRadius: '3px',
