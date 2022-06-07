@@ -20,7 +20,7 @@ class AdoptionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "email" => ['required', 'email', new OnlyPetAdoption()],
+            "email" => ['required', 'email', new OnlyPetAdoption($request->input('pet_id', 0))],
             "allowance_amount" => ['required', 'numeric', 'between:10,100'],
             "pet_id" => ['required', 'int', 'exists:pets,id']
         ]);

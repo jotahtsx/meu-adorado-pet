@@ -2,6 +2,7 @@
 
 namespace App\Rules;
 
+use App\Models\Adoption;
 use Illuminate\Contracts\Validation\Rule;
 
 class OnlyPetAdoption implements Rule
@@ -11,7 +12,9 @@ class OnlyPetAdoption implements Rule
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(
+        private int $petId
+    )
     {
         //
     }
@@ -25,7 +28,11 @@ class OnlyPetAdoption implements Rule
      */
     public function passes($attribute, $value)
     {
-        return true;
+        $alreadyAdopted = Adoption::where('email', $value)
+                ->where('pet_id', $this->petId)
+                ->first();
+
+        return !$alreadyAdopted;        
     }
 
     /**
@@ -35,6 +42,6 @@ class OnlyPetAdoption implements Rule
      */
     public function message()
     {
-        return 'Não rolou a validação, sorry :(.';
+        return 'Você já adotou esse pet.';
     }
 }
