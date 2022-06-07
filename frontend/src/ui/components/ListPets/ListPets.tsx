@@ -24,7 +24,7 @@ export default function ListPets(props: ListProps){
                     <Description>
                         {TextService.limitText(pet.history, MaxTextSize)}
                     </Description>
-                    <Button variant='contained' onClick={() => props.onSelect(pet)} fullWidth>Vou Adotar o {pet.name}</Button>
+                    <Button variant='contained' onClick={() => props.onSelect(pet)} fullWidth>Vou Adotar {pet.name}</Button>
                 </Informations>
                 </Item>
             ))}

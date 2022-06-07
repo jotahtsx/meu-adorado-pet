@@ -11,4 +11,9 @@ class PetController extends Controller
     {
         return Pet::get();
     }
+
+    public function store()
+    {
+        echo 'estou no meu controller de adicionar pet';
+    }
 }
