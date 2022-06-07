@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use \App\Http\Requests\PetRequest;
 use \App\Models\Pet;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class PetController extends Controller
         return Pet::get();
     }
 
-    public function store(Request $request)
+    public function store(PetRequest $request)
     {
         $petData = $request->all();
         
