@@ -12,8 +12,10 @@ class PetController extends Controller
         return Pet::get();
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        echo 'estou no meu controller de adicionar pet';
+        $petData = $request->all();
+        
+        return Pet::create($petData);
     }
 }
