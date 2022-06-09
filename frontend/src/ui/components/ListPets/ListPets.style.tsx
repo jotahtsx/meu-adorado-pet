@@ -24,6 +24,14 @@ export const Photo = styled('img')`
     height: 230px;
     border-radius: 8px;
     object-fit: cover;
+    @media (max-width: 820px) {
+        height: 500px;
+        padding: 3px !important;
+    }
+    @media (max-width: 1024px) {
+        height: 350px;
+        padding: 3px !important;
+    }
 `;
 
 export const Informations = styled('div')`

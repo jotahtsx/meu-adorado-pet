@@ -40,12 +40,6 @@ export const TopStyled = styled('div')`
 export const Middletyled = styled('div')`
     padding: ${({theme}) => theme.spacing(5)};
     border-bottom: 1px solid rgba(255,255,255,0.3);
-    @media (max-width: 480px) {
-        width: 100%;
-        background-color: red;
-        display: flex;
-        flex-direction: column;
-  }
 `;
 
 export const Container = styled('div')`
@@ -56,6 +50,12 @@ export const Container = styled('div')`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     gap: 20px;
+    @media (max-width: 540px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;    
+    }
 `;
 
 export const NewsLetter = styled('div')`
@@ -73,10 +73,21 @@ export const NewsLetter = styled('div')`
     form{
         display: flex;
         gap: 10px;
+        @media (max-width: 540px) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;    
+        }
         input[type="text"]{
             width: 170px;
             padding: 16px 26px;
             border-radius: 26px;
+            @media (max-width: 540px) {
+                width: 100%;
+                display: flex;
+                text-align: center;    
+            }
         }
         button{
             width: 100%;
@@ -85,6 +96,17 @@ export const NewsLetter = styled('div')`
             padding: 2px;
             background-color: ${({theme}) => theme.palette.primary.main};
             color: #fff;
+            @media (max-width: 540px) {
+                padding: 14px;
+            }
+        }
+        @media (max-width: 912px) {
+            width: 300px;
+            padding: 3px !important;
+        }
+        @media (max-width: 1024px) {
+            width: 300px;
+            padding: 3px !important;
         }
     }
 `;
