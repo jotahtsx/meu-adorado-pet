@@ -101,6 +101,13 @@ export default function Footer(){
                                 </a>
                             </Link>
                             </li>
+                            <li>
+                            <Link href="/">
+                                <a title=''>
+                                    Relatório de Adoções
+                                </a>
+                            </Link>
+                            </li>
                         </ul>
                 </QuickLinks>
                 <AboutUS>
