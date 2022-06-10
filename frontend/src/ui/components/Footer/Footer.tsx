@@ -4,7 +4,7 @@ import { Button } from '@mui/material'
 
 import Link from 'next/link';
 
-import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 import { Wrapper, TopStyled, Middletyled, Bottom, Container, NewsLetter, Help, QuickLinks, AboutUS, ContainerR } from "./Footer.style";
 
@@ -12,7 +12,11 @@ export default function Footer(){
     return (
         <Wrapper>
            <TopStyled>
-               <img src="/images/logo-color.svg" />
+               <Link href="/">
+                <a>
+                    <img src="/images/logo-color.svg" />
+                </a>
+               </Link>
                <p>Com uma pequena ajuda mensal, você
                <br />pode adotar um pet por aqui, facilmente</p>
                <ul>
