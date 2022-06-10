@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { NextPage } from "next";
 import Title from "../../ui/components/Title/Title";
 
@@ -17,6 +18,9 @@ const Report: NextPage = () => {
     const {listReport} = useReport()
     return(
         <>
+        <Head>
+            <title>Relatório de Adoções</title>
+        </Head>
         <Title 
         title={"Relatório de adoção"} 
         subtitle={"Acesse a lista de pets adotados"}

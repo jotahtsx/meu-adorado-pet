@@ -1,8 +1,8 @@
+import Head from 'next/head'
 import { NextPage } from "next"
 import { useCreate } from '../../data/hooks/pages/pets/useCreate'
 import Title from '../../ui/components/Title/Title'
 import { Paper, Grid, TextField, Button, Snackbar } from '@mui/material'
-import { maxWidth, textAlign } from "@mui/system"
 
 const Create: NextPage = () => {
 
@@ -19,6 +19,10 @@ const Create: NextPage = () => {
     } = useCreate();
 
     return(
+        <>
+        <Head>
+            <title>Cadastrar novo Pet</title>
+        </Head>
         <div>
             <Title 
             title={'Cadastro de pets para adoção'}
@@ -77,6 +81,7 @@ const Create: NextPage = () => {
 
             <Snackbar open={message.length > 0} autoHideDuration={2500} onClose={() => setMessage('')} message={message}></Snackbar>
         </div>
+        </>
     )
 }
 

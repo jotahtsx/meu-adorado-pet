@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import type { NextPage } from 'next'
 import ListPets from '../ui/components/ListPets/ListPets'
 import Title from '../ui/components/Title/Title'
@@ -17,6 +18,10 @@ const Home: NextPage = () => {
     setMessage, adtop} = useIndex()
 
   return (
+    <>
+    <Head>
+      <title>Meu adorado Pet</title>
+    </Head>
     <div>
       <Title 
       title='' 
@@ -72,6 +77,7 @@ const Home: NextPage = () => {
       </Dialog>
       <Snackbar open={message.length > 0} message={message} autoHideDuration={2500} onClose={() => setMessage('')}></Snackbar>
     </div>
+    </>
   )
 }
 
