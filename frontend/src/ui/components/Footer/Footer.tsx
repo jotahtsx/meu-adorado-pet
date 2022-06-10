@@ -102,7 +102,7 @@ export default function Footer(){
                             </Link>
                             </li>
                             <li>
-                            <Link href="/">
+                            <Link href="/pets/relatorio">
                                 <a title=''>
                                     Relatório de Adoções
                                 </a>
