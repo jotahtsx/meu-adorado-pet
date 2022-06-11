@@ -6,7 +6,7 @@ export const AboutContainer = styled('div')`
     max-width: 1140px;
     margin: 0 auto;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 `;
 
 export const OurHistory = styled('div')`
@@ -109,8 +109,4 @@ export const SecondBanner = styled('div')`
     background-image: url(./images/second-banner.jpg);
     background-size: cover;
     background-position: center;
-`;
-
-export const WhyChooseUs = styled('div')`
-    
 `;
