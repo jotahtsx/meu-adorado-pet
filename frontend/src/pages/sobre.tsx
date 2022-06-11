@@ -1,0 +1,46 @@
+import Head from 'next/head'
+import Link from "next/link";
+import { NextPage } from "next";
+import Title from '../ui/components/Title/Title'
+import { AboutContainer, OurHistory, AdoptionLink, FirstBanner, SecondBanner, CreatPet } from '../ui/components/About/About.style';
+
+const About: NextPage = () => {
+    return(
+        <>
+            <Head>
+                <title>Sobre nós</title>
+            </Head>
+            <div>
+                <Title 
+                title={'Sobre nosso trabalho'}
+                subtitle={'Entenda melhor sobre nossa proposta'}
+                />
+            </div>
+            <AboutContainer>
+                <OurHistory>
+                    <span>Nossa História</span>
+                    <h2>Qualquer coisa e tudo para todo o seu animal de estimação</h2>
+                    <p>
+                        Nossas maiores realizações não podem ficar para trás porque nosso destino está acima de nós. Nosso instinto de sobrevivência é a nossa maior inspiração. O amor é a única coisa que transcende o tempo e o espaço.
+                    </p>
+                </OurHistory>
+                <div>
+                    <AdoptionLink>
+                        <h2>Suas Adoções</h2>
+                        <Link href={'/pets/relatorio'}>Ver suas adoções</Link>
+                    </AdoptionLink>
+                    <FirstBanner></FirstBanner>
+                </div>
+                <div>
+                    <SecondBanner></SecondBanner>
+                    <CreatPet>
+                        <h2>Cadastrar Pet</h2>
+                        <Link href={'/pets/relatorio'}>Cadastrar um novo Pet</Link>
+                    </CreatPet>
+                </div>
+            </AboutContainer>
+        </>
+    )
+}
+
+export default About;

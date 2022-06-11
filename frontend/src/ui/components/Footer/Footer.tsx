@@ -66,16 +66,16 @@ export default function Footer(){
                     <h3>Ajuda</h3>
                     <ul>
                         <li>
-                        <Link href="/">
-                            <a title=''>
+                        <Link href="/sobre">
+                            <a title='Sobre'>
                                 Sobre
                             </a>
                         </Link>
                         </li>
                         <li>
-                        <Link href="/">
+                        <Link href="/pets/cadastro">
                             <a title=''>
-                                Adotar Pet
+                                Cadastrar Pet
                             </a>
                         </Link>
                         </li>

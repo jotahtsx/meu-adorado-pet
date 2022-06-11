@@ -14,7 +14,6 @@ export const HeaderContainer = styled('header')`
         align-items: center;
         gap: ${({theme}) => theme.spacing(2)};
     }
-
 `;
 
 export const Logo = styled('img')`

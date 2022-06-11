@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 export const Wrapper = styled('footer')`
-    background-color: ${({theme}) => theme.palette.secondary.main};;
+    background-color: ${({theme}) => theme.palette.secondary.main};
 `;
 
 export const TopStyled = styled('div')`

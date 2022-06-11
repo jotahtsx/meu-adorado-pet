@@ -18,7 +18,7 @@ export default function HeaderAdmin(){
                 <LinksContainer>
                     <Link component={NextLink} href={'/pets/cadastro'}>
                         <a>
-                            Pets
+                            Cadastrar Pet
                         </a>
                     </Link>
                     <Link component={NextLink} href={'/pets/relatorio'}>
