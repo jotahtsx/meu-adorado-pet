@@ -10,6 +10,12 @@ export const AboutContainer = styled('div')`
 `;
 
 export const OurHistory = styled('div')`
+    div{
+        color: ${({theme}) => theme.palette.primary.main};
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
     h2{
         font-size: 2.5rem;
         font-weight: 900;
@@ -19,7 +25,24 @@ export const OurHistory = styled('div')`
     }
     p{
         font-size: 14px;
+        margin-bottom: 20px;
     }
+`;
+
+export const ListItems = styled('ul')`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    svg{
+        color: ${({theme}) => theme.palette.primary.main};
+    }
+`;
+
+export const Item = styled('li')`
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 16px;
 `;
 
 export const AdoptionLink = styled('div')`
@@ -37,10 +60,12 @@ export const AdoptionLink = styled('div')`
     h2{
         margin: 0;
         padding: 0;
+        font-size: 18px;
     }
     p{
         margin: 0;
         padding: 0;
+        font-size: 14px;
     }
 `;
 
@@ -59,10 +84,12 @@ export const CreatPet = styled('div')`
     h2{
         margin: 0;
         padding: 0;
+        font-size: 18px;
     }
     p{
         margin: 0;
         padding: 0;
+        font-size: 14px;
     }
 `;
 
@@ -82,4 +109,8 @@ export const SecondBanner = styled('div')`
     background-image: url(./images/second-banner.jpg);
     background-size: cover;
     background-position: center;
+`;
+
+export const WhyChooseUs = styled('div')`
+    
 `;

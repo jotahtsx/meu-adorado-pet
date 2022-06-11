@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Link from "next/link";
 import { NextPage } from "next";
 import Title from '../ui/components/Title/Title'
-import { AboutContainer, OurHistory, AdoptionLink, FirstBanner, SecondBanner, CreatPet } from '../ui/components/About/About.style';
+import {BsCheckLg} from 'react-icons/bs'
+import { AboutContainer, OurHistory, ListItems, Item, AdoptionLink, FirstBanner, SecondBanner, CreatPet } from '../ui/components/About/About.style';
 
 const About: NextPage = () => {
     return(
@@ -18,11 +19,22 @@ const About: NextPage = () => {
             </div>
             <AboutContainer>
                 <OurHistory>
-                    <span>Nossa História</span>
+                    <div>Nossa História</div>
                     <h2>Qualquer coisa e tudo para todo o seu animal de estimação</h2>
                     <p>
                         Nossas maiores realizações não podem ficar para trás porque nosso destino está acima de nós. Nosso instinto de sobrevivência é a nossa maior inspiração. O amor é a única coisa que transcende o tempo e o espaço.
                     </p>
+                    <ListItems>
+                        <Item>
+                            <BsCheckLg size={20} /> Mesmo se você for embora
+                        </Item>
+                        <Item>
+                            <BsCheckLg size={20} /> O sol nascerá todos os dias
+                        </Item>
+                        <Item>
+                            <BsCheckLg size={20} /> Assim como eu continuarei amando você
+                        </Item>
+                    </ListItems>
                 </OurHistory>
                 <div>
                     <AdoptionLink>
@@ -35,7 +47,7 @@ const About: NextPage = () => {
                     <SecondBanner></SecondBanner>
                     <CreatPet>
                         <h2>Cadastrar Pet</h2>
-                        <Link href={'/pets/relatorio'}>Cadastrar um novo Pet</Link>
+                        <Link href={'/pets/relatorio'}>Adicionar um Pet</Link>
                     </CreatPet>
                 </div>
             </AboutContainer>
