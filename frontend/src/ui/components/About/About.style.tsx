@@ -35,6 +35,13 @@ export const AboutContainer = styled('div')`
         text-align: center;
         padding: 0 16px;
     }
+    @media (max-width: 1024px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 16px;
+    }
 `;
 
 export const OurHistory = styled('div')`
@@ -123,18 +130,22 @@ export const AdoptionLink = styled('div')`
         @media (max-width: 912px) {
             font-size: 1.875rem;
         }
+        @media (max-width: 1024px) {
+            font-size: 1.875rem;
+        }
     }
     a{
         margin: 0;
         padding: 0;
         font-size: 1rem;
-    }
-    a{
         @media (max-width: 820px) {
             font-size: 1.875rem;
         }
         @media (max-width: 912px) {
             font-size: 1.875rem;
+        }
+        @media (max-width: 1024px) {
+            font-size: 1.25rem;
         }
     }
 `;
@@ -167,6 +178,9 @@ export const CreatPet = styled('div')`
         @media (max-width: 912px) {
             font-size: 1.875rem;
         }
+        @media (max-width: 1024px) {
+            font-size: 1.875rem;
+        }
     }
     a{
         margin: 0;
@@ -177,6 +191,9 @@ export const CreatPet = styled('div')`
         }
         @media (max-width: 912px) {
             font-size: 1.875rem;
+        }
+        @media (max-width: 1024px) {
+            font-size: 1.25rem;
         }
     }
 `;
@@ -210,6 +227,9 @@ export const FirstBanner = styled('div')`
         justify-content: center;
         margin: 0 auto;
     }
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const SecondBanner = styled('div')`
@@ -240,5 +260,8 @@ export const SecondBanner = styled('div')`
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+    }
+    @media (max-width: 1024px) {
+        display: none;
     }
 `;
