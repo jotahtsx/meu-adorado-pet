@@ -79,13 +79,6 @@ export default function Footer(){
                             </a>
                         </Link>
                         </li>
-                        <li>
-                        <Link href="/">
-                            <a title=''>
-                                Contato
-                            </a>
-                        </Link>
-                        </li>
                     </ul>
                 </Help>
                 <QuickLinks>
@@ -94,14 +87,7 @@ export default function Footer(){
                             <li>
                             <Link href="/">
                                 <a title=''>
-                                    Serviços
-                                </a>
-                            </Link>
-                            </li>
-                            <li>
-                            <Link href="/">
-                                <a title=''>
-                                    Pets
+                                    Ver Pets
                                 </a>
                             </Link>
                             </li>
@@ -117,20 +103,6 @@ export default function Footer(){
                 <AboutUS>
                 <h3>Meu adorado Pet</h3>
                         <ul>
-                            <li>
-                            <Link href="/">
-                                <a title=''>
-                                    Política de Privacidade
-                                </a>
-                            </Link>
-                            </li>
-                            <li>
-                            <Link href="/">
-                                <a title=''>
-                                    Termos de Serviço
-                                </a>
-                            </Link>
-                            </li>
                             <li>
                             <Link href="/">
                                 <a title=''>
