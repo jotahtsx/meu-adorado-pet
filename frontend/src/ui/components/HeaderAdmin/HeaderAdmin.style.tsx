@@ -18,6 +18,9 @@ export const HeaderContainer = styled('header')`
 
 export const Logo = styled('img')`
     max-width: 175px;
+    @media (max-width: 280px) {
+        width: 125px;
+    }
 `;
 
 export const LinksContainer = styled('nav')`

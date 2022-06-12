@@ -9,4 +9,7 @@ export const Wrapper = styled('header')`
 
 export const Logo = styled('img')`
     width: 230px;
+    @media (max-width: 280px) {
+        width: 125px;
+    }
 `;

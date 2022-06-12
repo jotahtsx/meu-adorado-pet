@@ -50,6 +50,12 @@ export const Container = styled('div')`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     gap: 20px;
+    @media (max-width: 414px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;    
+    }
     @media (max-width: 540px) {
         width: 100%;
         display: flex;
@@ -73,16 +79,27 @@ export const NewsLetter = styled('div')`
     form{
         display: flex;
         gap: 10px;
-        @media (max-width: 540px) {
+        @media (max-width: 414px) {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 text-align: center;    
         }
+        @media (max-width: 540px) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;  
+        }
         input[type="text"]{
             width: 170px;
             padding: 16px 26px;
             border-radius: 26px;
+            @media (max-width: 414px) {
+                width: 100%;
+                display: flex;
+                text-align: center;    
+            }
             @media (max-width: 540px) {
                 width: 100%;
                 display: flex;
@@ -96,9 +113,20 @@ export const NewsLetter = styled('div')`
             padding: 2px;
             background-color: ${({theme}) => theme.palette.primary.main};
             color: #fff;
+            @media (max-width: 414px) {
+                padding: 14px;
+            }
             @media (max-width: 540px) {
                 padding: 14px;
             }
+        }
+        @media (max-width: 414px) {
+            width: 100% !important;
+            padding: 0px !important;
+        }
+        @media (max-width: 540px) {
+            width: 100% !important;
+            padding: 0px !important;
         }
         @media (max-width: 912px) {
             width: 300px;

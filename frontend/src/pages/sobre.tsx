@@ -47,7 +47,11 @@ const About: NextPage = () => {
                     <SecondBanner></SecondBanner>
                     <CreatPet>
                         <h2>Cadastrar Pet</h2>
-                        <Link href={'/pets/cadastro'}>Adicionar um Pet</Link>
+                        <Link href={'/pets/cadastro'}>
+                            <a>
+                                Adicionar um Pet
+                            </a>
+                        </Link>
                     </CreatPet>
                 </div>
             </AboutContainer>
